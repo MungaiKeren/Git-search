@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpServiceService } from '../http-service/http-service.service';
 
 @Component({
   selector: 'app-gitsearch',
@@ -7,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GitsearchComponent implements OnInit {
 
-  name(userName){
-    console.log(userName+'keren')
-  }
-  constructor() { }
+ 
+  constructor(kay:HttpServiceService) { }
 
   ngOnInit() {
   }
-
+ name(userName){
+    console.log(userName)
+  }
 }
