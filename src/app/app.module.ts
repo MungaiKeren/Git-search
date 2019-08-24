@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GitsearchFormComponent } from './gitsearch-form/gitsearch-form.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { GitsearchComponent } from './gitsearch/gitsearch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GitsearchFormComponent,
-    NavbarComponent
+    NavbarComponent,
+    GitsearchComponent
   ],
   imports: [
     BrowserModule,
