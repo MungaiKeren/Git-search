@@ -13,7 +13,6 @@ export class GitsearchFormComponent implements OnInit {
   userName:string;
 
   user(){
-    console.log(this.userName);
     this.emitUser.emit(this.userName);
   }
 
