@@ -4,4 +4,9 @@
         <h1>{{use.login}}</h1>
         <img src="{{use.avatar_url}}" alt="">
     </div>
+    <div *ngFor="let rep of repo">
+        <div *ngFor="let r of rep">
+                <div class="jumbotron">{{r.description}}</div>
+        </div>
+    </div>
 </div>
