@@ -1,3 +1,7 @@
 <div>
     <app-gitsearch-form (emitUser)="name($event)"></app-gitsearch-form>
+    <div *ngFor="let use of user">
+        <h1>{{use.login}}</h1>
+        <img src="{{use.avatar_url}}" alt="">
+    </div>
 </div>
