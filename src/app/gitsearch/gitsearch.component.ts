@@ -28,7 +28,6 @@ export class GitsearchComponent implements OnInit {
         console.log(error)
       });
 
-
       this.kay.kerenRepo(userName).then(
         (success)=>{
           this.repo =this.kay.myRepos;  
@@ -36,16 +35,6 @@ export class GitsearchComponent implements OnInit {
         },
         (error)=>{
           console.log(error)
-        })
+        });
   }
-  // repository(userName){
-  //   this.kay.kerenRepo(userName).then(
-  //     (success)=>{
-  //       this.repo = this.kay.myRepos;
-  //       console.log(this.repo)
-  //     },
-  //     (error)=>{
-  //       console.log(error)
-  //     })
-  // }
 }
