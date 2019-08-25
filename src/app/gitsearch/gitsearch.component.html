@@ -1,24 +1,41 @@
-<div class="container">
-    <ng-progress></ng-progress>
-    <app-gitsearch-form (emitUser)="name($event)"></app-gitsearch-form>
-    <div class="row">
-        <div class="col-md-6">
-            <div *ngFor="let use of user">
-                <h1>{{use.login}}</h1>
-                <img src="{{use.avatar_url}}" alt="">
-            </div>
-        </div>
-        <div class="col-md-6">
-            <h1 class="text-center">Repositories</h1>
-            <div *ngFor="let rep of repo">
-                <div *ngFor="let r of rep" class="jumbotron">
-                    <h4 class="card-header">{{r.name}}</h4>
-                    <p class="">{{r.description}}<br><i class="fa fa-tools">{{r.language}}</i></p>
-                    <a href="{{r.html_url}}">
-                        <p>View project on github</p>
-                    </a>
+<div class="bckimg">
+    <div class="container">
+        <ng-progress></ng-progress>
+        <app-gitsearch-form (emitUser)="name($event)"></app-gitsearch-form>
+                <div *ngFor="let use of user">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h1>{{use.login}}</h1>
+                            <p class="text-grey">{{use.name}}</p>
+                            <img src="{{use.avatar_url}}" alt="">    
+                        </div>
+                        <div class="col-md-6" id="secondcol">                        
+                            <p>Bio: {{use.bio}}<br>Email: {{use.email}}<br>Public Repositories: {{use.public_repos}}<br>Company: {{use.company}}</p>
+                            <button class="btn btn-primary">Followers {{use.followers}}</button>
+                            <button class="btn btn-primary" id="scnd">Following {{use.following}}</button><br>
+                            <a href="#repo"><i class="fa fa-arrow-down" id="go" style="font-size:48px"></i></a>
+                        </div>
+                    </div>
+                </div>
+        <div class="card-columns">
+            <div class="card " *ngFor="let rep of repo" id="repo">
+                <div *ngFor="let r of rep">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h4>{{r.name}}</h4>
+                        </div>
+                        <div class="card-body">
+                            <p><span>Description: </span><br>{{r.description}}<br>Forks: {{r.forks}}<br><i class="fa fa-tools">Language:
+                                    {{r.language}}</i></p>
+                        </div>
+                        <div class="card-footer flex-footer">
+                            <a href="{{r.html_url}}" target="_blank">
+                                <button class="btn btn-primary">View project on github</button>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+</div>
 </div>
