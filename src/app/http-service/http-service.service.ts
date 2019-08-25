@@ -13,7 +13,7 @@ export class HttpServiceService {
   myRepos:Repo [] = [];
 
   url = 'https://api.github.com/users/';  
-  token = '?access_token='+environment.APIKEY;
+  token = '?access_token=920f89928c0d42223832f040243f5730e0b7c87b';
 
 
   constructor(private http: HttpClient) { }
