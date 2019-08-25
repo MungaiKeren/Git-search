@@ -1,15 +1,22 @@
 <div class="container">
     <ng-progress></ng-progress>
     <app-gitsearch-form (emitUser)="name($event)"></app-gitsearch-form>
-    <div *ngFor="let use of user">
-        <h1>{{use.login}}</h1>
-        <img src="{{use.avatar_url}}" alt="">
-    </div>
-    <div *ngFor="let rep of repo">
-        <div *ngFor="let r of rep">
-                    <p>{{r.name}}</p>
-                    <p>{{r.description}}</p>
-                <p>{{r.html_url}}</p>
+    <div class="row">
+        <div class="col-md-6">
+            <div *ngFor="let use of user">
+                <h1>{{use.login}}</h1>
+                <img src="{{use.avatar_url}}" alt="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h1 class="text-center">Repositories</h1>
+            <div *ngFor="let rep of repo">
+                <div *ngFor="let r of rep">
+                    <h4>{{r.name}}</h4>
+                    <p>{{r.description}}<br>{{r.html_url}}</p>
+
+                </div>
+            </div>
         </div>
     </div>
 </div>
