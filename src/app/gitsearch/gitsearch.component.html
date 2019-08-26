@@ -17,7 +17,22 @@
                         </div>
                     </div>
                 </div>
-        <div class="card-columns">
+                <div class="card-columns">
+                    <div *ngFor='let rep of repo'>
+                        <div *ngFor='let r of rep' class="card">
+                            <h4 class="card-header">{{r.name}}</h4>
+                            <p class="card-body">Description: {{r.description}}<br>Forks: {{r.forks}}<i>Language: {{r.language}}</i></p>
+                            <a class="card-footer" href="{{r.html_url}}"><button class="btn btn-primary">View project on github</button></a>
+                        </div>
+                    </div>       
+                </div>
+</div>
+</div>
+
+
+
+
+<!-- <div class="card-columns">
             <div class="card " *ngFor="let rep of repo" id="repo">
                 <div *ngFor="let r of rep">
                     <div class="card">
@@ -36,6 +51,4 @@
                     </div>
                 </div>
             </div>
-        </div>
-</div>
-</div>
+        </div>-->
