@@ -6,14 +6,24 @@
 }
 img{
     height: 200px;
-    width: 200px;
+    width: 200px;   
 }
 span{
     text-decoration: underline;
 }
 #scnd{
-    margin-left: 5%;
+    margin-left: 2%;
+}
+#third{
+    margin-left: 2%;
 }
 #secondcol{
     margin-top: 10%;
+}
+#repoSearch{
+    margin-left: 30%;
+    width: 25%;
+} 
+#repo:hover{
+    background:transparent;
 }

@@ -6,25 +6,27 @@
                 <div class="col-md-6">
                     <h1>{{use.login}}</h1>
                     <p class="text-grey">{{use.name}}</p>
-                    <img src="{{use.avatar_url}}" alt="">
+                    <a href="{{use.html_url}}" target="_blank"><img src="{{use.avatar_url}}" alt=""></a>
                 </div>
                 <div class="col-md-6" id="secondcol">
                     <p>Bio: {{use.bio}}<br>Email: {{use.email}}<br>Public Repositories: {{use.public_repos}}<br>Company:
                         {{use.company}}</p>
                     <button class="btn btn-primary">Followers {{use.followers}}</button>
-                    <button class="btn btn-primary" id="scnd">Following {{use.following}}</button><br>
+                    <button class="btn btn-primary" id="scnd">Following {{use.following}}</button>
+                    <button class="btn btn-primary" id="third">Public Repositories: {{use.public_repos}}</button>
                 </div>
             </div>
         </div>
     </div>
     <h2 class="text-center">Public repositories</h2>
-        <div class="card-columns container-fluid" id="repo">
+    <input type="text" class="form-control" name="" placeholder="Search through repos" id="repoSearch"><br>
+        <div class="card-columns container-fluid">
             <div *ngFor='let rep of repo'>
-                <div *ngFor='let r of rep' class="card">
+                <div *ngFor='let r of rep' id="repo" class="card">
                     <h4 class="card-header">{{r.name}}</h4>
-                    <p class="card-body">Description: {{r.description}}<br>Forks: {{r.forks}}<i>Language:
+                    <p class="card-body">Description: {{r.description}}<br>Forks: {{r.forks}}<i><br>Language:
                             {{r.language}}</i></p>
-                    <a class="card-footer" href="{{r.html_url}}"><button class="btn btn-primary">View project on
+                    <a class="card-footer" href="{{r.html_url}}"><button class="btn btn-outline-primary">View project on
                             github</button></a>
                 </div>
             </div>
