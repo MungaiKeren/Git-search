@@ -45,4 +45,4 @@ https:mungaikeren.github.io/Git-search
 
 ## License
 
-MIT license
+[MIT](https://github.com/MungaiKeren/Git-search/blob/master/LICENSE) license
